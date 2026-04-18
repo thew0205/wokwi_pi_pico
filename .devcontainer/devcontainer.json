@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/mwinters-stuff/vscode-devcontainer-raspberrypi-pico
 {
-	"name": "C++ Raspberry Pi Pico",
+	"name": "TinyML on Raspberry Pi Pico 2",
 	"build": {
 		"dockerfile": "Dockerfile"
 	},

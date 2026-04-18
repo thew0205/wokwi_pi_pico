@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = "build/executorch_pico.uf2"
+elf = "build/executorch_pico.elf"

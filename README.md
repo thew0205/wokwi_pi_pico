@@ -1,14 +1,18 @@
-# Pico SDK Blink - Wokwi for VSCode
+# Getting started with Tinyml and EdgeAI on Raspberry Pi Pico 2
+This project is to get you started with running TinyML and EdgeAI on Raspberry Pi Pico 2 with executorch (pytorch for edge devices).
 
-Blink example using the Pico SDK with Wokwi configuration
+## Requirement
+- Docker
+- VS Code && Wokwi for VS Code (Optional)
 
-## Building
+## Setting up the environment
+### Using Docker
+From the root of the project:
 
 ```
-mkdir -p build
-cd build
-cmake ..
-make -j4
+docker build -t tinyml -f .devcontainer/Dockerfile .
+docker run -it --rm -v $(pwd):/workspace tinyml
+
 ```
 
 ## Simulation
