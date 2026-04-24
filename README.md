@@ -4,6 +4,9 @@ This project is to get you started with running TinyML and EdgeAI on Raspberry P
 ## Requirement
 - Docker
 - VS Code && Wokwi for VS Code (Optional)
+- Docker extension
+- Wokwi extension
+- Good internet connection and atleast 20GB of disk space.
 
 ## Setting up the environment
 ### Using Docker
@@ -14,6 +17,8 @@ docker build -t tinyml -f .devcontainer/Dockerfile .
 docker run -it --rm -v $(pwd):/workspace tinyml
 
 ```
+
+open folder in vscode with container, allow to build and download it might take a bit of time.
 
 ## Simulation
 

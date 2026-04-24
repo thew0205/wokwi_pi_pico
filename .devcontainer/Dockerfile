@@ -48,14 +48,15 @@ WORKDIR /tinyml/executorch
 # We use bash to run the script, and we "activate" the venv in the same line
 RUN /bin/bash -c "source /tinyml/tinyml_executorch/bin/activate && ./install_executorch.sh"
 
+RUN /bin/bash -c "source /tinyml/tinyml_executorch/bin/activate && pip install matplotlib"
+ENV EXECUTORCH_ROOT=/tinyml/executorch/
 
-# ENV EXECUTORCH_ROOT=/tinyml/executorch/
+WORKDIR /tinyml 
 
+RUN git clone https://github.com/thew0205/tflite-micro.git --depth 1 -b pico_port
 
-# WORKDIR /tinyml/projects
+WORKDIR /tinyml/tflite-micro 
+RUN ./setup_pico.sh
+ENV TFLITE_MICRO_PATH=/tinyml/tflite-micro
 
-# COPY blink_wokwi /tinyml/projects/blink_wokwi
-# COPY pico_executorch /tinyml/projects/pico_executorch
-
- 
-
+RUN /bin/bash -c "source /tinyml/tinyml_executorch/bin/activate && pip install tflite-micro"

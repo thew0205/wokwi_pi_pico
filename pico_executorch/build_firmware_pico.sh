@@ -13,7 +13,7 @@ set -euo pipefail
 
 # Paths
 ROOT_DIR=/tinyml/executorch
-PICO2_DIR="/tinyml/projects/pico_executorch"
+PICO2_DIR="/workspaces/pico-sdk-blink/pico_executorch"
 BUILD_DIR="${PICO2_DIR}/build"
 EXECUTORCH_BUILD_DIR="${ROOT_DIR}/cmake-out"
 

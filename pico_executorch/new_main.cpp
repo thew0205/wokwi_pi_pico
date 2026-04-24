@@ -552,8 +552,8 @@ int executor_runner() {
 
   // Fit within Pico2's 520KB SRAM limit
   static uint8_t
-      method_allocator_pool[101 * 1024]; // 200KB - plenty for method metadata
-  static uint8_t activation_pool[105 * 1024]; // 200KB - plenty for activations
+      method_allocator_pool[102 * 1024]; // 200KB - plenty for method metadata
+  static uint8_t activation_pool[102 * 1024]; // 200KB - plenty for activations
   // Total: 400KB directly allocated to ExecuTorch, leaves 120KB for other uses
 
   MemoryAllocator method_allocator(
